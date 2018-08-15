@@ -16,6 +16,7 @@ import { DetalhesConcursoPage } from "./../detalhes-concurso/detalhes-concurso";
   templateUrl: "lista-concursos.html"
 })
 export class ListaConcursosPage {
+  candidato: any;
   concursos: Array<{ orgao: string; edital: string }>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
