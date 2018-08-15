@@ -20,14 +20,14 @@ export class DetalhesConcursoPage {
   private vagas: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.orgao = navParams.get('orgao');
-    this.edital = navParams.get('edital');
-    this.codigo = navParams.get('codigo');
-    this.vagas = navParams.get('vagas');
+    console.log(navParams);
+    this.orgao = this.navParams.get('orgao');
+    this.edital = this.navParams.get('edital');
+    this.codigo = this.navParams.get('codigo');
+    this.vagas = this.navParams.get('vagas');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetalhesConcursoPage');
   }
-
 }
