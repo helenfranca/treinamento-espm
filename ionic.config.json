@@ -1,0 +1,7 @@
+{
+  "name": "./treinamento-espm",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
