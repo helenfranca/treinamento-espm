@@ -7,12 +7,36 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>lista_concursos</ion-title>
+    <ion-title>Encontrados</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <h2>Concursos</h2>
+  <ion-card ion-item *ngFor="let conc of concursos">
+    <ion-card-header>
+      <ion-row>
+        <ion-col>
+          <h2>{{conc.orgao}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h3>Edital</h3>
+            <h3>{{conc.edital}}</h3>
+          </ion-col>
+          <ion-col>
+            <button ion-item (click)="verDetalhes(conc)">
+              Veja Detalhes
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
