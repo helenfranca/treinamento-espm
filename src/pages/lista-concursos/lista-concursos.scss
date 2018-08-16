@@ -1,3 +1,53 @@
 page-lista-concursos {
+}
 
+.card-background-page {
+  background-color: rgb(230, 231, 233);
+
+  ion-card {
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .titulo-concursos {
+    color: rgb(0, 30, 43);
+    font-weight: bold;
+    font-weight: italic;
+    font-size: 2em;
+  }
+
+  .titulo-orgao {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 100%;
+    font-weight: bold;
+    color: rgb(0, 30, 43);
+    text-align: left;
+  }
+
+  .edital-concurso {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    .titulo-edital {
+      color: rgb(146, 147, 151);
+    }
+    .edital {
+      color: rgb(0, 30, 43);
+    }
+  }
+
+  .ver-detalhes {
+    position: absolute;
+    //left: 90%;
+    //top: 90%;
+    right: 5%;
+    bottom: 10%;
+    button {
+      color: rgb(0, 177, 247);
+    }
+  }
 }
