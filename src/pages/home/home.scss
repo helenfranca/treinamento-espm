@@ -19,27 +19,41 @@
         padding-left: 5%;
     }
 
-    #input{
-        position: relative;
-        width: 97%;
-        padding-top: 51.5%;
-        left: 5%;
-               
-    }
-
-    #buscar{
-        position: relative;
-        width: 10%;
-        right: -85%;
+    .fundo-icone{
+        background-color:deepskyblue;
         
     }
 
-    .pesquisa{
-        background-image:url(assets/imgs/buscar.png) ;
-        padding-left:23px;
-        padding-top: 5px;
-        height: 20px;
-        background-color:rgb(63, 193, 245);
+    #input{
+        position: relative;
+        width: 96%;
+        height: 50%;
+        padding-top: 50.5%;
+        left: 5%;
+             
+    }
+
+    #texto{
+        background-color:aliceblue;
+        position: relative;
+        top: 10%;
+        left: 0%;
+        width: 130%;
+
+    }
+
+    #botao{
+        position: absolute;
+        width: 100%;
+        padding-top: 40%;
+        left: 18%;
+    }
+
+    #buscar{
+        position: absolute;
+        width: 100%;
+        top: 3.5%;
+        right: 2%;        
     }
 
     #box{
