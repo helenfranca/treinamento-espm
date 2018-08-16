@@ -14,21 +14,31 @@
 
 
 <ion-content padding class="card-background-page">
-  <h2>Concursos</h2>
+  <div class="titulo-concursos">
+    Concursos
+    <img src="assets/imgs/traco-rosa-e-azul-menor.jpg" />
+  </div>
+  <!--ion-card>
+    <img src="assets/imgs/card-saopaolo.png" />
+    <div class="card-title">São Paulo</div>
+    <div class="card-subtitle">41 Listings</div>
+  </ion-card-->
 
   <ion-card ion-item *ngFor="let conc of concursos">
-    <img src="assets/imgs/card-background.png" />
-    <div class="card-title">
-      Teste
+    <img src="assets/imgs/box-concursos-encontrados.png" />
+    <div class="titulo-orgao">
+      {{conc.orgao}}
     </div>
-    <ion-card-header>
-      <ion-row>
-        <ion-col>
-          <h2>{{conc.orgao}}</h2>
-        </ion-col>
-      </ion-row>
-    </ion-card-header>
-    <ion-card-content>
+    <div class="edital-concurso">
+      <p class="titulo-edital">Edital</p>
+      <p class="edital">{{conc.edital}}</p>
+    </div>
+    <div class="ver-detalhes">
+      <button ion-item (click)="verDetalhes(conc)">
+        Veja Detalhes
+      </button>
+    </div>
+    <!--ion-card-content>
       <ion-grid>
         <ion-row>
           <ion-col>
@@ -42,7 +52,7 @@
           </ion-col>
         </ion-row>
       </ion-grid>
-    </ion-card-content>
+    </ion-card-content-->
 
   </ion-card>
 </ion-content>
