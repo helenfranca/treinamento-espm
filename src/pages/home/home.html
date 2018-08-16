@@ -5,14 +5,15 @@
     <img id="imagem-back" src="assets/imgs/background.jpg" />
     <div class="label">
       <img src="assets/imgs/texto.png" />
+      <div>
+        <ion-item id="input">
 
-      <ion-item>
-        <ion-input type="text" placeholder="Digite seu CPF"></ion-input>
-
-        <ion-icon class="fundo-icone" (click)="teste()" item-end ios="ios-search" md="md-search"></ion-icon>
-
-      </ion-item>
-
+          <ion-input type="texto" placeholder="Digite seu CPF"></ion-input>
+          <button ion-button clear type="button" color="danger" item-right (click)="teste()">
+            <ion-icon item-end ios="ios-search" md="md-search"></ion-icon>
+          </button>
+        </ion-item>
+      </div>
       <div id="box">
         <img src="assets/imgs/box.png" />
       </div>

@@ -7,12 +7,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { DetalhesConcursoPage } from '../pages/detalhes-concurso/detalhes-concurso';
+import { ListaConcursosPage } from '../pages/lista-concursos/lista-concursos';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    DetalhesConcursoPage
+    ListaConcursosPage,
+    DetalhesConcursoPage    
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,7 @@ import { DetalhesConcursoPage } from '../pages/detalhes-concurso/detalhes-concur
   entryComponents: [
     MyApp,
     HomePage,
+    ListaConcursosPage,
     DetalhesConcursoPage
   ],
   providers: [
