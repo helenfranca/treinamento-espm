@@ -24,7 +24,7 @@ export class DetalhesConcursoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     console.log(navParams);
-    this.concurso = this.navParams.get('concurso');
+    this.concurso = this.navParams.data;
   }
 
   ionViewDidLoad() {
