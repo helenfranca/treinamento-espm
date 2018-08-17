@@ -9,20 +9,15 @@
   <ion-navbar>
     <ion-title>Encontrados</ion-title>
   </ion-navbar>
-
+  <img src="assets/imgs/traco-rosa-e-azul-maior.png" />
 </ion-header>
 
 
 <ion-content padding class="card-background-page">
   <div class="titulo-concursos">
-    Concursos
+    CONCURSOS<br/>
     <img src="assets/imgs/traco-rosa-e-azul-menor.jpg" />
   </div>
-  <!--ion-card>
-    <img src="assets/imgs/card-saopaolo.png" />
-    <div class="card-title">São Paulo</div>
-    <div class="card-subtitle">41 Listings</div>
-  </ion-card-->
 
   <ion-card ion-item *ngFor="let conc of concursos">
     <img src="assets/imgs/box-concursos-encontrados.png" />
@@ -38,21 +33,6 @@
         Veja Detalhes
       </button>
     </div>
-    <!--ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <h3>Edital</h3>
-            <h3>{{conc.edital}}</h3>
-          </ion-col>
-          <ion-col>
-            <button ion-item (click)="verDetalhes(conc)">
-              Veja Detalhes
-            </button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content-->
 
   </ion-card>
 </ion-content>
