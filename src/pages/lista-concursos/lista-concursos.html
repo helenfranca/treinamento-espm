@@ -7,12 +7,32 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>lista_concursos</ion-title>
+    <ion-title>Encontrados</ion-title>
   </ion-navbar>
-
+  <img src="assets/imgs/traco-rosa-e-azul-maior.png" />
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="card-background-page">
+  <div class="titulo-concursos">
+    CONCURSOS<br/>
+    <img src="assets/imgs/traco-rosa-e-azul-menor.jpg" />
+  </div>
 
+  <ion-card ion-item *ngFor="let conc of concursos">
+    <img src="assets/imgs/box-concursos-encontrados.png" />
+    <div class="titulo-orgao">
+      {{conc.orgao}}
+    </div>
+    <div class="edital-concurso">
+      <p class="titulo-edital">Edital</p>
+      <p class="edital">{{conc.edital}}</p>
+    </div>
+    <div class="ver-detalhes">
+      <button ion-item (click)="verDetalhes(conc)">
+        Ver detalhes
+      </button>
+    </div>
+
+  </ion-card>
 </ion-content>
