@@ -7,6 +7,8 @@ page-detalhes-concurso {
       h1 {
         padding: 0;
         margin: 0;
+        color: rgb(0, 30, 43); 
+        font-family: Montserrat-medium-italic;
       }
     }
     .button {
@@ -26,6 +28,17 @@ page-detalhes-concurso {
     }
     .centralizado {
       text-align: center;
+      font-family: Montserrat-regular;
+      color: rgb(146, 147, 151);
+    }
+
+    .detalhes-vaga{
+      font-family: Montserrat-regular;
+      color: rgb(146, 147, 151);
+
+      .vaga{
+        font-family: Montserrat-bold;
+      }
     }
   }
 }

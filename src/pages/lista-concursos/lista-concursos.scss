@@ -18,10 +18,10 @@ page-lista-concursos {
 
   .titulo-concursos {
     color: rgb(0, 30, 43);
-    font-family: "Montserrat";
+    font-family: Montserrat-ExtraBoldItalic;
     font-size: 1.5em;
-    font-style: extra-bold-italic;
     margin-bottom: 10px;
+
     img {
       display: block;
       //position: absolute;
@@ -37,9 +37,10 @@ page-lista-concursos {
     left: 5%;
     top: 15%;
     width: 50%;
-    //font-weight: bold;
     color: rgb(0, 30, 43);
     text-align: left;
+    font-family: Montserrat-regular;
+    font-size: 1.25em;
   }
 
   .edital-concurso {
@@ -49,12 +50,13 @@ page-lista-concursos {
 
     .titulo-edital {
       color: rgb(146, 147, 151);
-      font-size: 0.7em;
+      font-size: 0.9em;
+      font-family: Montserrat-regular;
     }
     .edital {
       color: rgb(0, 30, 43);
       font-size: 0.9em;
-      font-weight: bold;
+      font-family: Montserrat-medium;
     }
   }
 
@@ -63,6 +65,7 @@ page-lista-concursos {
     font-size: 33px;
     right: 8%;
     bottom: 10%;
+    font-family: Montserrat-medium;
     button {
       background-color: transparent;
       color: rgb(0, 177, 247);
