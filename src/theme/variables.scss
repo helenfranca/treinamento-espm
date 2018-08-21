@@ -66,35 +66,36 @@ $colors: (
 // Fonts
 // --------------------------------------------------
 
-@import "roboto";
-@import "noto-sans";
+//@import "roboto";
+//@import "noto-sans";
+
 
 @font-face {
-  font-family: "Montserrat";
-  font-style: extra-bold-italic;
+  font-family: Montserrat-ExtraBoldItalic;
   src: url("../assets/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf");
 }
 
 @font-face {
-  font-family: "Montserrat";
-  font-style: italic;
+  font-family: Montserrat-italic;
   src: url("../assets/fonts/Montserrat/Montserrat-Italic.ttf");
 }
 
 @font-face {
-  font-family: "Montserrat";
-  font-style: medium;
+  font-family: Montserrat-medium;
   src: url("../assets/fonts/Montserrat/Montserrat-Medium.ttf");
 }
 
 @font-face {
-  font-family: "Montserrat";
-  font-style: medium-italic;
+  font-family: Montserrat-medium-italic;
   src: url("../assets/fonts/Montserrat/Montserrat-MediumItalic.ttf");
 }
 
 @font-face {
-  font-family: "Montserrat";
-  font-style: regular;
+  font-family: Montserrat-regular;
   src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: Montserrat-bold;
+  src: url("../assets/fonts/Montserrat-Bold.ttf");
 }
