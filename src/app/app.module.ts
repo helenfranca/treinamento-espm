@@ -8,6 +8,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { DetalhesConcursoPage } from '../pages/detalhes-concurso/detalhes-concurso';
 import { ListaConcursosPage } from '../pages/lista-concursos/lista-concursos';
+import { RequestApiProvider } from '../providers/request-api/request-api';
+import { HTTP } from '@ionic-native/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ListaConcursosPage } from '../pages/lista-concursos/lista-concursos';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    HTTP,
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    RequestApiProvider
   ]
 })
 export class AppModule {}
