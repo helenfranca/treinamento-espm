@@ -3,10 +3,10 @@ page-home{
     .background {
         background-image: url('../../assets/imgs/background.jpg')!important;
         background-size: cover;
-        background-repeat: no-repeat;   
+        background-repeat: no-repeat;
+        //background-position:    
     }
 
-    
     ion-input{
         font-family: Montserrat-italic;
     }
@@ -20,7 +20,6 @@ page-home{
         width:90%;
         height:18%;
         left: 7%;
-        top:10%;
       
     }
 
