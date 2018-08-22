@@ -27,7 +27,7 @@ page-home{
     }
 
     #input{
-        position: relative;
+        position: absolute;
         width: 80%;
         left: 11%;
         margin-top: 94%;    
@@ -37,12 +37,12 @@ page-home{
         background-image: url('../../assets/imgs/box.png');
         background-size: 100%;
         background-repeat: no-repeat;  
-        position: relative;
+        position: absolute;
 
         width:69%;
         height: 12%;        
         left: 17%;
-        margin-top: 27%;
+        margin-top: 135%;
         
     }
     
@@ -50,11 +50,11 @@ page-home{
         background-image: url('../../assets/imgs/fonte.png');
         background-repeat: no-repeat; 
         background-size: 100%;
-        position: relative;
+        position: absolute;
 
         width: 12%;
         height:10%;
-        margin-top: 5%;
+        margin-top: 160%;
         left: 8%;
     }
 
@@ -62,11 +62,11 @@ page-home{
         background-image: url('../../assets/imgs/menu.png');
         background-repeat: no-repeat; 
         background-size: 100%;
-        position: relative;
+        position: absolute;
         //background-color: aqua;
         width: 16%;
         height: 10%;
-        margin-top: -20%;
+        margin-top: 158.5%;
         left: 81%;
        
     }
