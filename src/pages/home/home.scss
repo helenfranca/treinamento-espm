@@ -3,17 +3,10 @@ page-home{
     .background {
         background-image: url('../../assets/imgs/background.jpg')!important;
         background-size: cover;
-        background-repeat: no-repeat;
-        //overflow: hidden;        
+        background-repeat: no-repeat;   
     }
 
-    // ion-card {
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color: transparent;
-    // }
-
+    
     ion-input{
         font-family: Montserrat-italic;
     }
@@ -25,9 +18,10 @@ page-home{
         position: absolute;
 
         width:90%;
-        height:16%;
+        height:18%;
         left: 7%;
         top:10%;
+      
     }
 
     #input{
@@ -43,8 +37,8 @@ page-home{
         background-repeat: no-repeat;  
         position: absolute;
 
-        width:68%;
-        height: 10.5%;        
+        width:69%;
+        height: 12%;        
         left: 17%;
         margin-top: 138%;
         
@@ -56,7 +50,6 @@ page-home{
         background-size: 100%;
         position: absolute;
 
-       // background-color: aqua;
         width: 12%;
         height:10%;
         margin-top: 160%;
@@ -71,7 +64,7 @@ page-home{
         //background-color: aqua;
         width: 16%;
         height: 10%;
-        margin-top: 160%;
+        margin-top: 158%;
         left: 81%;
        
     }
