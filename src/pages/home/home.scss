@@ -14,20 +14,23 @@ page-home{
     .label {
         background-image: url('../../assets/imgs/texto.png');
         background-size: 90%;
+        background-position-y: 75%;
         background-repeat: no-repeat;
-        position: relative;
+        position: absolute;
 
-        width:90%;
-        height:18%;
+        width:95%;
+        height:28%;
         left: 7%;
-        margin-top: 10%; 
+        //margin-top: 0%;
+        //background-color: aqua;
+        
     }
 
     #input{
         position: relative;
         width: 80%;
         left: 11%;
-        margin-top: 55%;    
+        margin-top: 94%;    
     }
 
     #box{
