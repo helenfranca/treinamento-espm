@@ -15,31 +15,31 @@ page-home{
         background-image: url('../../assets/imgs/texto.png');
         background-size: 90%;
         background-repeat: no-repeat;
-        position: absolute;
+        position: relative;
 
         width:90%;
         height:18%;
         left: 7%;
-      
+        margin-top: 10%; 
     }
 
     #input{
-        position: absolute;
+        position: relative;
         width: 80%;
         left: 11%;
-        margin-top: 98%;    
+        margin-top: 55%;    
     }
 
     #box{
         background-image: url('../../assets/imgs/box.png');
         background-size: 100%;
         background-repeat: no-repeat;  
-        position: absolute;
+        position: relative;
 
         width:69%;
         height: 12%;        
         left: 17%;
-        margin-top: 138%;
+        margin-top: 27%;
         
     }
     
@@ -47,11 +47,11 @@ page-home{
         background-image: url('../../assets/imgs/fonte.png');
         background-repeat: no-repeat; 
         background-size: 100%;
-        position: absolute;
+        position: relative;
 
         width: 12%;
         height:10%;
-        margin-top: 160%;
+        margin-top: 5%;
         left: 8%;
     }
 
@@ -59,11 +59,11 @@ page-home{
         background-image: url('../../assets/imgs/menu.png');
         background-repeat: no-repeat; 
         background-size: 100%;
-        position: absolute;
+        position: relative;
         //background-color: aqua;
         width: 16%;
         height: 10%;
-        margin-top: 158%;
+        margin-top: -20%;
         left: 81%;
        
     }
