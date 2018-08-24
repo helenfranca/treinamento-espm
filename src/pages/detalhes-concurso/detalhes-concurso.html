@@ -9,14 +9,16 @@
   <ion-navbar>
     <ion-title>Detalhes</ion-title>
   </ion-navbar>
-
+  <img class="linha-navbar" src="assets/imgs/traco-rosa-e-azul-maior.png" />
 </ion-header>
 
 
 <ion-content padding>
   <ion-grid class="topo">
     <ion-row class="top-bar">
-      <ion-col col-5><h1>{{concurso.orgao}}</h1></ion-col>
+      <ion-col col-5>
+        <h1>{{concurso.orgao}}</h1>
+      </ion-col>
       <ion-col col-4 offset-3 class="centralizado"><span class="edital">Edital<br>{{concurso.edital}}</span></ion-col>
     </ion-row>
   </ion-grid>

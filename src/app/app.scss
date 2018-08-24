@@ -19,9 +19,25 @@
 }
 
 .toolbar-title {
+  position: relative;
   color: aliceblue;
   text-align: center;
   font-family: Montserrat-medium;
   font-size: 1.2em;
+  padding: 0;
 }
 
+.back-button-icon-md {
+  background-image: url("assets/icon/botao-voltar.png");
+  color: whitesmoke;
+}
+
+.linha-navbar {
+  position: absolute;
+  margin: 0%;
+  padding: 0%;
+  //display: block;
+  bottom: 0%;
+  left: 0%;
+  //width: 100%;
+}
