@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ListaConcursosPage } from '../lista-concursos/lista-concursos';
-import { RequestApiProvider } from '../../providers/request-api/request-api';
 
-import concursos from "../../data/concursos";
+import { CandidatosProvider } from '../../providers/candidatos/candidatos';
 
 
 @Component({
@@ -12,13 +11,14 @@ import concursos from "../../data/concursos";
 })
 export class HomePage {
 
-  constructor(private navCtrl: NavController, private requestApiProvider: RequestApiProvider) {
+  constructor(private navCtrl: NavController, private candidatosProvider: CandidatosProvider) {
     
   }
 
-  async buscarConcursos() {
-    let resposta = await this.requestApiProvider.buscarListaConcursosPeloCPF('319.655.881-15');
-    console.log("home.ts buscarConcursos()", resposta);
-    // this.navCtrl.push(ListaConcursosPage, concursos);
+  async buscarConcursos(cpf: string) {
+    console.log(cpf);
+    let concursos = await this.candidatosProvider.getCandidatePublicTenders(cpf);
+    // console.log("home.ts buscarConcursos()", resposta);
+    this.navCtrl.push(ListaConcursosPage, concursos);
   }
 }

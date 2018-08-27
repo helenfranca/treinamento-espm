@@ -8,8 +8,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { DetalhesConcursoPage } from '../pages/detalhes-concurso/detalhes-concurso';
 import { ListaConcursosPage } from '../pages/lista-concursos/lista-concursos';
-import { RequestApiProvider } from '../providers/request-api/request-api';
-import { HTTP } from '@ionic-native/http';
+import { HttpClientModule } from "@angular/common/http";
+import { ConcursosProvider } from '../providers/concursos/concursos';
+import { CandidatosProvider } from '../providers/candidatos/candidatos';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HTTP } from '@ionic-native/http';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -32,9 +34,9 @@ import { HTTP } from '@ionic-native/http';
   providers: [
     StatusBar,
     SplashScreen,
-    HTTP,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    RequestApiProvider
+    ConcursosProvider,
+    CandidatosProvider
   ]
 })
 export class AppModule {}
