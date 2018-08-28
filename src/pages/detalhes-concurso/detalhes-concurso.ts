@@ -16,18 +16,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class DetalhesConcursoPage {
   
   private concurso: {
-    orgao: string,
-    edital: string,
-    codigo: string,
-    vagas: [string]
+    id: number,
+    department: string,
+    document_number: string,
+    code: string,
+    jobs: [string]
   };
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     console.log(navParams);
     this.concurso = this.navParams.data;
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DetalhesConcursoPage');
   }
 }

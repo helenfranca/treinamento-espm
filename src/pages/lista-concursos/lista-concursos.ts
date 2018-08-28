@@ -2,6 +2,8 @@ import { Component } from "@angular/core";
 import { IonicPage, NavController, NavParams } from "ionic-angular";
 
 import { DetalhesConcursoPage } from "../../pages/detalhes-concurso/detalhes-concurso";
+import { ConcursosProvider } from "../../providers/concursos/concursos";
+import { LoadingController } from "ionic-angular/components/loading/loading-controller";
 
 /**
  * Generated class for the ListaConcursosPage page.
@@ -16,24 +18,32 @@ import { DetalhesConcursoPage } from "../../pages/detalhes-concurso/detalhes-con
   templateUrl: "lista-concursos.html"
 })
 export class ListaConcursosPage {
-  private candidato: any;
   private concursos: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    //this.candidato = navParams.get("candidato");
-    /* this.concursos = [
-      { orgao: "SEDU", edital: "09/2015" },
-      { orgao: "PRODEST", edital: "01/2018" }
-    ]; */
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public concursosProvider: ConcursosProvider,
+    public loadingCtrl: LoadingController
+  ) {
     this.concursos = this.navParams.data;
-    // this.candidato = this.navParams.data;
   }
 
-  ionViewDidLoad() {
-    console.log("ionViewDidLoad ListaConcursosPage");
+  presentLoading() {
+    const loader = this.loadingCtrl.create({
+      content: 'Carregando'
+    });
+    loader.present();
+    return loader;
   }
 
-  verDetalhes(concurso) {
+  async verDetalhes(codigo) {
+    /* FAZER REQUISIÇÃO À API */
+    const loader = this.presentLoading();
+    const concurso = await this.concursosProvider.getPublicTender(codigo);
+    loader.dismiss();
+
+    /* NAVEGAR ATÉ A TELA DE DETALHES DO CONCURSO */
     this.navCtrl.push(DetalhesConcursoPage, concurso);
   }
 }
