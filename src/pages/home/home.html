@@ -1,32 +1,36 @@
-<ion-content class="background">
+<ion-content>
+  <div id="casca">
 
-  <div class="label"></div>
-
-  <div>
-    <ion-item id="input">
-      <ion-input type="text" placeholder="Digite seu CPF"></ion-input>
-      <button ion-button clear type="button" color="danger" item-right (click)="buscarConcursos()">
-        <ion-icon item-end ios="ios-search" md="md-search"></ion-icon>
-      </button>
-    </ion-item>
+    <div class="pageTitle">
+      <img id="title-image" src="../../assets/imgs/texto.png">
+    </div>
+    
+    <div class="busca">
+      <ion-grid id="grid-busca">
+        <ion-row>
+          <ion-col col-9 id="col-input-cpf">
+            <ion-input type="text" placeholder="Digite seu CPF" (ngModel)="cpf"></ion-input>
+          </ion-col>
+          <ion-col col-3 id="col-botao-buscar">
+            <button ion-button icon-only (click)="buscarConcursos(cpf)" id="botao-buscar">
+              <ion-icon item-end ios="ios-search" md="md-search"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    
+    <div id="mensagem">
+      <img src="../../assets/imgs/box.png">
+    </div>
+  
+    <div id="rodape">
+      <div id="botao-acessibilidade">
+        <img src="../../assets/imgs/fonte.png" class="imagem">
+      </div>
+      <div id="botao-opcoes">
+        <img src="../../assets/imgs/menu.png" class="imagem" id="img-opcoes">
+      </div>
+    </div>
   </div>
-
-  <div>
-    <img class="box" src="../../assets/imgs/box.png">
-    <img class="fonte" src="'../../assets/imgs/fonte.png">
-    <img class="menu" src="../../assets/imgs/menu.png">
-  </div>
-
-
-
-  <!-- <div id="box">
-  </div>
-
-  <div id="fonte">
-  </div>
-
-  <div id="menu">
-  </div> -->
-  <!-- </ion-card> -->
-
 </ion-content>
