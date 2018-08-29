@@ -18,7 +18,13 @@ import { LoadingController } from "ionic-angular/components/loading/loading-cont
   templateUrl: "lista-concursos.html"
 })
 export class ListaConcursosPage {
-  private concursos: any;
+  private concursos: [{
+    id: number,
+    department: string,
+    document_number: string,
+    code: string,
+    jobs: [string]
+  }];
 
   constructor(
     public navCtrl: NavController,

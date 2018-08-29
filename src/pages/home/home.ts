@@ -14,8 +14,8 @@ import { AlertController } from 'ionic-angular/components/alert/alert-controller
 export class HomePage {
 
   constructor(
-    private navCtrl: NavController,
-    private candidatosProvider: CandidatosProvider,
+    public navCtrl: NavController,
+    public candidatosProvider: CandidatosProvider,
     public loadingCtrl: LoadingController,
     public alertCtrl: AlertController
   ) {
