@@ -1,101 +1,120 @@
-page-home{
-    
+.ion-page {
+    display: block;
+    //border: solid 1px red;
+
     .background {
-        background-image: url('../../assets/imgs/background.jpg')!important;
+        background-image: url('../../assets/imgs/background.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-
+        max-height: 100%;
     }
 
-    
-
-    ion-input{
-        font-family: Montserrat-italic;
+    ion-content {
+        background-color: rgba($color: #000000, $alpha: 0.0);
+        max-height: 100%;
+        //border: solid 1px red;
     }
 
-    .label {
-        background-image: url('../../assets/imgs/texto.png');
-        background-size: 90%;
-        //background-position-y: 65%;
-        background-repeat: no-repeat;
-        position: absolute;
-
-        width:95%;
-        height:28%;
-        top: 5%;
-        left: 10%;
-        // left: 7%;
-        // top: 5%;
-        //margin-top: 0%;
-        //background-color: aqua;
-             
+    #casca {
+        max-height: 100%;
+        border: solid 1px rgba($color: #000000, $alpha: 0.0) !important;
     }
 
-  
-    #input{
-        position: absolute;
-        width: 80%;
-        bottom: 38%;
-        left: 10%;
-        // left: 11%;
-        // margin-top: 130px;
-        // top:27%;  
-    }
-
-    #box{
-        background-image: url('../../assets/imgs/box.png');
-        background-size: 70%;
-        background-repeat: no-repeat;
-        background-position: center; 
-        position: absolute;
-
+    /* Título da página: Concursos */
+    .pageTitle {
+        //border: solid 1px red;
         width:100%;
-        height: 12%;
-        bottom: 12%;
-        //left: 0;        
-        // left: 17%;
-        // top:60px;
-        
+        padding: 5%;
+
+        #title-image {
+            margin-top: 15%;
+        }
     }
+
+    /* Busca */
+    .busca {
+        //border: solid 1px red;
+        width: 80%;
+        margin: 20% auto 15% auto;
     
-    #fonte{
-        background-image: url('../../assets/imgs/fonte.png');
-        background-repeat: no-repeat; 
-        background-size: contain;
-        position: absolute;
-
-        width: 12%;
-        height:10%;
-        bottom: 3%;
-        left: 3%;
-        // top:70px;
-        // bottom: 40%;
-        // left: 8%;
-    }
-
-    #menu{
-        background-image: url('../../assets/imgs/menu.png');
-        background-repeat: no-repeat; 
-        background-size: contain;
-        position: absolute;
-
-        
-        bottom: 3%;
-        right: 3%;
-        width: 16%;
-        height: 10%;
-        // top: 10px;
-        // left: 81%;
-       
-    }
+        #grid-busca {
+            padding: 0;
+            background-color: white;
+            border-radius: 5px;
+            
+            #col-input-cpf {
+                ion-input {
+                    height: 100%;
+                    width: 100%;
+                    font-family: Montserrat-italic;
+                }
+            }
+            
+            #col-botao-buscar {
+                padding: 3px;
     
-    .scroll-content {
-        align-content: center;
-        display: inline-block;
-        justify-content: center;
-        text-align: center;
-      }
+                #botao-buscar {
+                    margin: 0;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    /* Mensagem motivacional */
+    #mensagem {
+        width: 70%;
+        bottom: 15%;
+        left: 15%;
+        position: absolute;
+    }
+
+    #rodape {
+        //border: solid 1px red;
+        padding: 5%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+
+        /* Botão de acessibilidade */
+        #botao-acessibilidade {
+            //border: solid 1px red;
+            height: 100%;
+            width: 15%;
+            display: inline-block;
+        }
+
+        /* Botão de opções */
+        #botao-opcoes {
+            //border: solid 1px red;
+            height: 100%;
+            width: 15%;
+            float: right;
+        }
+    }
+
+    @media screen and (max-height: 450px) {
+
+        .pageTitle {
+            #title-image {
+                margin-top: 0;
+            }
+        }
+
+        .busca {
+            margin-bottom: 0;
+        }
+        
+        #rodape {
+            //position: relative;
+            display: none;
+        }
+
+        #mensagem {
+            //position: relative;
+            display: none;
+        }
+    }
 
 } 
-
-
