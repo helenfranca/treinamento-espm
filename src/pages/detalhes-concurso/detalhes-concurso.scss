@@ -1,5 +1,12 @@
 page-detalhes-concurso {
-  ion-content {
+  
+  #ion-content {
+    background-color: #FFFFFF;
+
+    .scroll-content {
+      background-color: #FFFFFF;
+    }
+
     .topo {
       padding: 0;
       margin: 0;
