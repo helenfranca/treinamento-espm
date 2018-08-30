@@ -9,22 +9,28 @@
   <ion-navbar>
     <ion-title>Detalhes</ion-title>
   </ion-navbar>
-
+  <img class="linha-navbar" src="assets/imgs/traco-rosa-e-azul-maior.png" />
 </ion-header>
 
 
 <ion-content padding>
-  <ion-grid>
-    <ion-row>
-      <ion-col col-6><h1>{{concurso.orgao}}</h1></ion-col>
-      <ion-col col-6><span class="edital">Edital<br>{{concurso.edital}}</span></ion-col>
+  <ion-grid class="topo">
+    <ion-row class="top-bar">
+      <ion-col col-7>
+        <h1>{{concurso.department}}</h1>
+      </ion-col>
+      <ion-col col-4 offset-1 class="centralizado"><span class="edital">Edital<br>{{concurso.document_number}}</span></ion-col>
     </ion-row>
   </ion-grid>
-  
-  <p>Vagas: <br><br></p>
-  <p class="vaga" *ngFor="let vaga of concurso.vagas">- {{vaga}}</p>
-  <br><br>
-  <p>Código: {{concurso.codigo}}</p>
-  <br><br>
-  <button ion-button outline>Inscrições</button>
+  <div class="separador-horizontal"></div>
+  <div class="detalhes-vaga">
+    <p class="vaga">Vagas: <br><br></p>
+    <p *ngFor="let vaga of concurso.occupations">- {{vaga.name}}</p>
+    <br><br>
+    <p>Código: {{concurso.code}}</p>
+    <br><br>
+  </div>
+  <div class="button">
+    <button ion-button outline id="button-inscricoes">Inscrições</button>
+  </div>
 </ion-content>

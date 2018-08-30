@@ -1,14 +1,36 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content class="background">
+  <div id="casca">
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <div class="pageTitle">
+      <img id="title-image" src="../../assets/imgs/texto.png">
+    </div>
+    
+    <div class="busca">
+      <ion-grid id="grid-busca">
+        <ion-row>
+          <ion-col col-9 id="col-input-cpf">
+            <ion-input type="text" placeholder="Digite seu CPF" [(ngModel)]="cpf"></ion-input>
+          </ion-col>
+          <ion-col col-3 id="col-botao-buscar">
+            <button ion-button icon-only (click)="buscarConcursos(cpf)" id="botao-buscar">
+              <ion-icon item-end ios="ios-search" md="md-search"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    
+    <div id="mensagem">
+      <img src="../../assets/imgs/box.png">
+    </div>
+  
+    <div id="rodape">
+      <div id="botao-acessibilidade">
+        <img src="../../assets/imgs/fonte.png" class="imagem">
+      </div>
+      <div id="botao-opcoes">
+        <img src="../../assets/imgs/menu.png" class="imagem" id="img-opcoes">
+      </div>
+    </div>
+  </div>
 </ion-content>
