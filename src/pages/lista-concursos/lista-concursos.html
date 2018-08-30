@@ -35,6 +35,11 @@
         Ver detalhes
       </button>
     </div>
-
   </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="circles" loadingText="Carregando concursos...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
 </ion-content>

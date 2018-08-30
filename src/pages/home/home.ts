@@ -66,7 +66,7 @@ export class HomePage {
 
     /* FAZER REQUISIÇÃO À API */
     const loader = this.presentLoading();
-    let concursos: [{}] = await this.candidatosProvider.getCandidatePublicTenders(cpf);
+    let concursos: [{}] = await this.candidatosProvider.getCandidatePublicTenders(cpf, 1);
     await loader.dismiss();
 
     /* VALIDAR RESPOSTA DA API */
@@ -76,6 +76,9 @@ export class HomePage {
     }
 
     /* NAVEGAR PARA A LISTA DE CONCURSOS */
-    this.navCtrl.push(ListaConcursosPage, concursos);
+    this.navCtrl.push(ListaConcursosPage, {
+      concursos: concursos,
+      cpf: cpf
+    });
   }
 }

@@ -36,10 +36,10 @@ export class CandidatosProvider {
     }
   }
 
-  async getCandidatePublicTenders(cpf: string): Promise<any> {
-    // GET /candidates/13509754786/public_tenders RETORNA os concursos de um candidato
+  async getCandidatePublicTenders(cpf: string, page: number): Promise<any> {
+    // GET /candidates/13509754786/public_tenders/page/1 RETORNA os 10 primeiros concursos de um candidato
     try {
-      const res = await this.http.get(`${this.API_URL}/${cpf}/public_tenders`).toPromise();
+      const res = await this.http.get(`${this.API_URL}/${cpf}/public_tenders/page/${page}`).toPromise();
       return res;
     } catch (error) {
       return([]);
