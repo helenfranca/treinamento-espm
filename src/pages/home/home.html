@@ -9,7 +9,7 @@
       <ion-grid id="grid-busca">
         <ion-row>
           <ion-col col-9 id="col-input-cpf">
-            <ion-input type="text" placeholder="Digite seu CPF" (ngModel)="cpf"></ion-input>
+            <ion-input type="text" placeholder="Digite seu CPF" [(ngModel)]="cpf"></ion-input>
           </ion-col>
           <ion-col col-3 id="col-botao-buscar">
             <button ion-button icon-only (click)="buscarConcursos(cpf)" id="botao-buscar">

@@ -17,15 +17,15 @@
   <ion-grid class="topo">
     <ion-row class="top-bar">
       <ion-col col-7>
-        <h1>{{concurso.orgao}}</h1>
+        <h1>{{concurso.department}}</h1>
       </ion-col>
-      <ion-col col-4 offset-1 class="centralizado"><span class="edital">Edital<br>{{concurso.edital}}</span></ion-col>
+      <ion-col col-4 offset-1 class="centralizado"><span class="edital">Edital<br>{{concurso.document_number}}</span></ion-col>
     </ion-row>
   </ion-grid>
   <div class="separador-horizontal"></div>
   <div class="detalhes-vaga">
     <p class="vaga">Vagas: <br><br></p>
-    <p *ngFor="let vaga of concurso.jobs">- {{vaga}}</p>
+    <p *ngFor="let vaga of concurso.occupations">- {{vaga}}</p>
     <br><br>
     <p>Código: {{concurso.code}}</p>
     <br><br>

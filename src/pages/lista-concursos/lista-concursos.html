@@ -24,17 +24,14 @@
   <ion-card ion-item *ngFor="let concurso of concursos">
     <img src="assets/imgs/box-concursos-encontrados.png" />
     <div class="titulo-orgao">
-      <p class="paragrafo-orgao">{{conc.orgao}}</p>
-      {{concurso.department}}
+      <p class="paragrafo-orgao">{{concurso.department}}</p>
     </div>
     <div class="edital-concurso">
       <p class="titulo-edital">Edital</p>
       <p class="edital">{{concurso.document_number}}</p>
     </div>
     <div class="ver-detalhes">
-      <button ion-item detail-none (click)="verDetalhes(conc)">
-        Veja Detalhes
-      <button ion-item (click)="verDetalhes(concurso.code)">
+      <button ion-item detail-none (click)="verDetalhes(concurso.code)">
         Ver detalhes
       </button>
     </div>
