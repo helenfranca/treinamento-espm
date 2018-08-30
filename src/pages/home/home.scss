@@ -1,9 +1,11 @@
 .ion-page {
     display: block;
+    .background {
     background-image: url('../../assets/imgs/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     max-height: 100%;
+    }
     //border: solid 1px red;
 
     ion-content {
@@ -91,7 +93,7 @@
         }
     }
 
-    @media screen and (max-height: 500px) {
+    @media screen and (max-height: 450px) {
 
         .pageTitle {
             #title-image {
@@ -113,4 +115,5 @@
             display: none;
         }
     }
+
 } 
