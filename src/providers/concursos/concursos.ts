@@ -18,16 +18,31 @@ export class ConcursosProvider {
 
   async getAll(): Promise<any> {
     // GET /public_tenders RETORNA todos os concursos
-    return await this.http.get(`${this.API_URL}`).toPromise();
+    try {
+      const res = await this.http.get(`${this.API_URL}`).toPromise();
+      return res;
+    } catch (error) {
+      return([]);
+    }
   }
 
   async getPublicTender(cod: string): Promise<any> {
     // GET /public_tenders/001-2018 RETORNA o concurso indicado
-    return await this.http.get(`${this.API_URL}/${cod}`).toPromise();
+    try {
+      const res = await this.http.get(`${this.API_URL}/${cod}`).toPromise();
+      return res;
+    } catch (error) {
+      return([]);
+    }
   }
 
   async getPublicTenderCandidates(cod: string): Promise<any> {
     // GET /public_tenders/001-2018/candidates RETORNA os candidatos compatíveis com o concurso indicado
-    return await this.http.get(`${this.API_URL}/${cod}/candidates`).toPromise();
+    try {
+      const res = await this.http.get(`${this.API_URL}/${cod}/candidates`).toPromise();
+      return res;
+    } catch (error) {
+      return([]);
+    }
   }
 }

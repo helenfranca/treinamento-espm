@@ -18,16 +18,31 @@ export class CandidatosProvider {
 
   async getAll(): Promise<any> {
     // GET /candidates RETORNA todos os candidatos
-    return await this.http.get(this.API_URL).toPromise();
+    try {
+      const res = await this.http.get(this.API_URL).toPromise(); 
+      return res;
+    } catch (error) {
+      return([]);
+    }
   }
 
   async getCandidate(cpf: string): Promise<any> {
     // GET /candidates/13509754786 RETORNA o candidato indicado
-    return await this.http.get(`${this.API_URL}/${cpf}`).toPromise();
+    try {
+      const res = await this.http.get(`${this.API_URL}/${cpf}`).toPromise();
+      return res;
+    } catch (error) {
+      return([]);
+    }
   }
 
   async getCandidatePublicTenders(cpf: string): Promise<any> {
     // GET /candidates/13509754786/public_tenders RETORNA os concursos de um candidato
-    return await this.http.get(`${this.API_URL}/${cpf}/public_tenders`).toPromise();
+    try {
+      const res = await this.http.get(`${this.API_URL}/${cpf}/public_tenders`).toPromise();
+      return res;
+    } catch (error) {
+      return([]);
+    }
   }
 }
