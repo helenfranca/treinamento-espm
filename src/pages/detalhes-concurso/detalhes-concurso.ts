@@ -24,7 +24,6 @@ export class DetalhesConcursoPage {
   };
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log(navParams);
     this.concurso = this.navParams.data;
   }
 }
