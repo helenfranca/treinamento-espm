@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from "@angular/core";
+import { IonicPage, NavController, NavParams } from "ionic-angular";
 
 /**
  * Generated class for the DetalhesConcursoPage page.
@@ -10,8 +10,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-detalhes-concurso',
-  templateUrl: 'detalhes-concurso.html',
+  selector: "page-detalhes-concurso",
+  templateUrl: "detalhes-concurso.html"
 })
 export class DetalhesConcursoPage {
   
