@@ -13,7 +13,8 @@ export class ConcursosProvider {
   private API_URL: string;
 
   constructor(public http: HttpClient) {
-    this.API_URL = "https://api-empregabilidade.herokuapp.com/public_tenders";
+    // this.API_URL = "https://api-empregabilidade.herokuapp.com/public_tenders";
+    this.API_URL = "http://localhost:3000/concursos";
   }
 
   async getAll(): Promise<any> {
