@@ -25,5 +25,6 @@ export class DetalhesConcursoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.concurso = this.navParams.data;
+    console.log(this.concurso)
   }
 }

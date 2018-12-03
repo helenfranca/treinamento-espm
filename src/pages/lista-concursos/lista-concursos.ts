@@ -65,11 +65,11 @@ export class ListaConcursosPage {
   async verDetalhes(codigo) {
     /* FAZER REQUISIÇÃO À API */
     const loader = this.presentLoading();
-    const concurso = await this.concursosProvider.getPublicTender(codigo);
+    console.log(codigo);
     await loader.dismiss();
 
     /* NAVEGAR ATÉ A TELA DE DETALHES DO CONCURSO */
-    this.navCtrl.push(DetalhesConcursoPage, concurso);
+    this.navCtrl.push(DetalhesConcursoPage, codigo);
   }
 
   async doInfinite(infiniteScroll): Promise<any> {
