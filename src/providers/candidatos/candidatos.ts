@@ -14,7 +14,7 @@ export class CandidatosProvider {
 
   constructor(public http: HttpClient) {
     // this.API_URL = 'https://api-empregabilidade.herokuapp.com/candidates';
-    this.API_URL = 'http://localhost:3000/candidatos';
+    this.API_URL = (process.env.URL || 'http://localhost:3000/candidatos');
   }
 
   async getAll(): Promise<any> {

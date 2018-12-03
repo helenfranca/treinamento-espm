@@ -1,0 +1,17 @@
+version: '2.1'
+
+services:
+  backend:
+    image: lukasg18/sd-concurso
+    ports:
+      - "3000:3000"
+    
+  frontend:
+    image: lukasg18/sd-frontend
+    links:
+      - "backend:demo-backend"
+    ports:
+      - "8100:8100"
+      - "35729:35729"
+    environment:
+      - process.env.URL=http://demo-backend:3000/candidatos
