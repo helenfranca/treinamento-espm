@@ -14,4 +14,4 @@ services:
       - "8100:8100"
       - "35729:35729"
     environment:
-      - process.env.URL=http://demo-backend:3000/candidatos
+      - URL=http://demo-backend:3000/candidatos
