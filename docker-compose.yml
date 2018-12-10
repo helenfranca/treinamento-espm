@@ -2,12 +2,12 @@ version: '2.1'
 
 services:
   backend:
-    image: lukasg18/sd-concurso
+    image: lukasg18/sd-concurso:latest
     ports:
       - "3000:3000"
     
   frontend:
-    image: lukasg18/sd-frontend
+    image: lukasg18/sd-frontend:3.0.0
     links:
       - "backend:demo-backend"
     ports:
