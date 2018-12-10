@@ -7,7 +7,7 @@ services:
       - "3000:3000"
     
   frontend:
-    image: lukasg18/sd-frontend:3.0.0
+    image: lukasg18/sd-frontend
     links:
       - "backend:demo-backend"
     ports:
