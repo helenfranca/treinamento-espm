@@ -13,12 +13,11 @@ export class ConcursosProvider {
   private API_URL: string;
 
   constructor(public http: HttpClient) {
-    // this.API_URL = "https://api-empregabilidade.herokuapp.com/public_tenders";
-    this.API_URL = "http://localhost:3000/concursos";
+    this.API_URL = (process.env.URL || "http://localhost:3000/concursos");
   }
 
   async getAll(): Promise<any> {
-    // GET /public_tenders RETORNA todos os concursos
+    // RETORNA todos os concursos
     try {
       const res = await this.http.get(`${this.API_URL}`).toPromise();
       return res;
@@ -28,7 +27,7 @@ export class ConcursosProvider {
   }
 
   async getPublicTender(cod: string): Promise<any> {
-    // GET /public_tenders/001-2018 RETORNA o concurso indicado
+    // RETORNA o concurso indicado
     try {
       const res = await this.http.get(`${this.API_URL}/${cod}`).toPromise();
       return res;
@@ -38,7 +37,7 @@ export class ConcursosProvider {
   }
 
   async getPublicTenderCandidates(cod: string): Promise<any> {
-    // GET /public_tenders/001-2018/candidates RETORNA os candidatos compatíveis com o concurso indicado
+    // RETORNA os candidatos compatíveis com o concurso indicado
     try {
       const res = await this.http.get(`${this.API_URL}/${cod}/candidates`).toPromise();
       return res;
